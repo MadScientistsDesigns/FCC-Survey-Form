@@ -1,0 +1,68 @@
+
+
+
+  html, 
+  body {
+      background: lightgray;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-align: center;
+      min-width: 320px;
+  }
+
+  header {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 20px;
+  }
+
+  #title {
+      text-align: center;
+  }
+  
+  #formOuter {
+      background: white;
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 4px;
+      width: 75%;
+      max-width: 900px;
+      padding-top: 20px;
+  }
+
+  .labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  
+  .rtTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+    padding-top: 7px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+  }
+  #radioBtn {
+    
+  }
+  #prefer {
+    line-height: 19px;
+  }
+
+  #description {
+      text-align: center;
+  }
+  #submit {
+      
+  }
+
+
+
+  @media (max-width: 355px) {
+
+  }
