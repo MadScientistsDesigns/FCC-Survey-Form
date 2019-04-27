@@ -1,77 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FCC Build A Survey Form Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- User Story #1: I can see a title with id="title" in H1 sized text. -->
     <h1 id="title">Survey Form</h1>
-
-    <!-- User Story #2: I can see a short 
+    <div id="formOuter">
+        <!-- User Story #2: I can see a short 
     explanation with id="description" in P sized text. -->
-    <p id="description">Let us know how we can improve freecodecamp</p>
+        <p id="description">Let us know how we can improve freecodecamp</p>
 
-    <!-- User Story #3: I can see a form with id="survey-form". -->
-    <form action="" id="survey-form">
+        <!-- User Story #3: I can see a form with id="survey-form". -->
+        <form action="" id="survey-form">
 
-    <!-- User Story #4: Inside the form element, I am required to 
-        enter my name in a field with id="name". -->
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="enter your name" name="name" required>
-
-    <!-- User Story #5: Inside the form element, I am required to 
-        enter an email in a field with id="email". -->
-    <!-- User Story #6: If I enter an email that is not formatted 
-        correctly, I will see an HTML5 validation error. -->
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="enter your email" name="email" required>
-
-    <!-- User Story #7: Inside the form, I can enter a number 
-        in a field with id="number". -->
-    <!-- User Story #8: If I enter non-numbers in the number input, 
-        I will see an HTML5 validation error. -->
-    <label for="age">Age:</label>
-    <input type="number" id="number" name="age" min="12" max="100">
-
-
-    <!-- User Story #9: If I enter numbers outside the range of the 
-        number input, which are defined by the min and max attributes, 
-        I will see an HTML5 validation error. -->
-
-    <!-- User Story #10: For the name, email, and number input fields 
+            <!-- User Story #10: For the name, email, and number input fields 
         inside the form I can see corresponding labels that describe 
         the purpose of each field with the following ids: id="name-label", 
         id="email-label", and id="number-label" -->
-
-    <!-- User Story #11: For the name, email, and number input fields, 
+            <!-- User Story #11: For the name, email, and number input fields, 
         I can see placeholder text that gives me a description or 
         instructions for each field. -->
 
-    <!-- User Story #12: Inside the form element, I can select an 
-        option from a dropdown that has a corresponding id="dropdown" -->
+        <!-- User Story #4: Inside the form element, I am required to 
+                enter my name in a field with id="name". -->
+        <div class="labels">
+            <label for="name" id="name-label">* Name:</label>
+        </div>
+        <div class="rtTab">
+            <input class="input-field" type="text" id="name" placeholder="Enter your Name" 
+            name="name" required>
+        </div>    
+            
+            <!-- User Story #5: Inside the form element, I am required to 
+        enter an email in a field with id="email". -->
+            <!-- User Story #6: If I enter an email that is not formatted 
+        correctly, I will see an HTML5 validation error. -->         
+        <div class="labels"><label for="email" id="email-label">* Email:</label></div>
+        <div class="rtTab"><input class="input-field" type="email" id="email" placeholder="Enter your email" 
+            name="email" required></div>            
 
-    <!-- User Story #13: Inside the form element, I can select a field 
-        from one or more groups of radio buttons. Each group should be 
-        grouped using the name attribute. -->
 
-    <!-- User Story #14: Inside the form element, I can select several 
-        fields from a series of checkboxes, each of which must have a 
-        value attribute. -->
+            <!-- User Story #7: Inside the form, I can enter a number 
+        in a field with id="number". -->
+            <!-- User Story #8: If I enter non-numbers in the number input, 
+        I will see an HTML5 validation error. -->
+            <!-- User Story #9: If I enter numbers outside the range of the 
+            number input, which are defined by the min and max attributes, 
+            I will see an HTML5 validation error. -->           
+        <div class="labels"><label for="age" id="number-label">* Age:</label></div>
+        <div class="rtTab"><input class="input-field" type="number" id="number" name="age" placeholder="Enter your Age" 
+            name="age" min="12" max="100"></div>
+            
+            <!-- User Story #12: Inside the form element, I can select an 
+            option from a dropdown that has a corresponding id="dropdown" -->
+            <div class="rowTab">
+                <div class="labels"><label for="currentRole">Which option best 
+                    describes your current role?</label></div>
+                <div class="rtTab">
+                    <select name="currentRole" id="dropdown">
+                        <option disabled="" value="1">Select an option</option>
+                        <option name="student" value="2">Student</option>
+                        <option name="learner" value="3">Full-time Learner</option>
+                        <option name="job" value="4">Full-time Job</option>
+                        <option name="notSay" value="5">Prefer Not to Say</option>
+                        <option name="other" value="6">Other</option>
+                    </select>
+                </div>
+            </div>
+            <!-- User Story #13: Inside the form element, I can select a field 
+                        from one or more groups of radio buttons. Each group should be 
+                        grouped using the name attribute. -->
 
-    <!-- User Story #15: Inside the form element, I am presented with 
-        a textarea at the end for additional comments. -->
-    <label for="textarea">Any Comments or Suggestions?</label>
-    <textarea type="textarea" id="textarea" placeholder="Enter your comments here." name="textarea"></textarea>
-    <!-- User Story #16: Inside the form element, I am presented with 
+                
+            <!-- <div class="rtTab"><input id="definitely" type="radio" name="radioBtn">Definitely</div>
+                        <div class="rtTab"><input id="maybe" type="radio" name="radioBtn">Maybe</div>
+                        <div class="rtTab"><input id="notSure" type="radio" name="radioBtn">Not Sure</div> -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="usrRatings">* How likely are you to
+                        recommend freeCodeCamp to a friend?</label>
+                </div>
+                <div class="rtTab">
+                    <ul style="list-style: none;">
+                        <li class="radio"><label>Definitely
+                                <input class="usrRatings" type="radio" name="radioBtn" value="1">
+                            </label></li>
+                        <li class="radio"><label>Maybe
+                                <input class="usrRatings" type="radio" name="radioBtn" value="2">
+                            </label></li>
+                        <li class="radio"><label>Not Sure
+                                <input class="usrRatings" type="radio" name="radioBtn" value="3">
+                            </label></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="rowTab">
+                    <div class="labels"><label for="likeMost">What do you like most in freeCodeCamp?</label></div>
+                    <div class="rtTab">
+                        <select name="likeMost" id="dropdown">
+                            <option disabled="" value="1">Select an option</option>
+                            <option name="challenges" value="2">Challenges</option>
+                            <option name="projects" value="3">Projects</option>
+                            <option name="community" value="4">Community</option>
+                            <option name="openSource" value="5">Open Source</option>
+                        </select>
+                    </div>
+                </div>
+            
+            <!-- User Story #14: Inside the form element, I can select several 
+                                    fields from a series of checkboxes, each of which must have a 
+                                    value attribute. -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">Things that should be improved in the future (Check all that apply):</label>
+                </div>
+                <div class="rtTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="1">Front-end
+                                Projects</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="2">Back-end
+                                Projects</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="3">Data
+                                Visualization</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="4">Coding
+                                Challenges</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="5">Open Source
+                                Community</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="6">Gitter Help
+                                Rooms</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="7">Videos</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="8">City
+                                Meetups</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="9">Wiki</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="10">Forum</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="11">Additional
+                                Courses</label></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- User Story #15: Inside the form element, I am presented with 
+                        a textarea at the end for additional comments. -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">Any Comments or Suggestions?</label></div>
+            
+                <div class="rtTab">
+                    <textarea type="textarea" id="textarea" placeholder="Enter your comments here..." name="textarea"></textarea>
+                </div>
+            </div>
+
+            <!-- User Story #16: Inside the form element, I am presented with 
         a button with id="submit" to submit all my inputs. -->
-    <button type="submit" id="submit">Submit</button>
+            <div>
+                <button type="submit" id="submit">Submit</button>
+            </div>
 
-    </form>
+        </form>
+    </div>
 
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>
