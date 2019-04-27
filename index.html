@@ -35,7 +35,7 @@
             <label for="name" id="name-label">* Name:</label>
         </div>
         <div class="rtTab">
-            <input type="text" id="name" placeholder="Enter your Name" 
+            <input class="input-field" type="text" id="name" placeholder="Enter your Name" 
             name="name" required>
         </div>    
             
@@ -44,7 +44,7 @@
             <!-- User Story #6: If I enter an email that is not formatted 
         correctly, I will see an HTML5 validation error. -->         
         <div class="labels"><label for="email" id="email-label">* Email:</label></div>
-        <div class="rtTab"><input type="email" id="email" placeholder="Enter your email" 
+        <div class="rtTab"><input class="input-field" type="email" id="email" placeholder="Enter your email" 
             name="email" required></div>            
 
 
@@ -55,71 +55,113 @@
             <!-- User Story #9: If I enter numbers outside the range of the 
             number input, which are defined by the min and max attributes, 
             I will see an HTML5 validation error. -->           
-        <div class="labels"><label for="age" id="number-label">Age:</label></div>
-        <div class="rtTab"><input type="number" id="number" placeholder="Enter your Age" 
+        <div class="labels"><label for="age" id="number-label">* Age:</label></div>
+        <div class="rtTab"><input class="input-field" type="number" id="number" name="age" placeholder="Enter your Age" 
             name="age" min="12" max="100"></div>
             
             <!-- User Story #12: Inside the form element, I can select an 
             option from a dropdown that has a corresponding id="dropdown" -->
-            
-                <div class="labels"><label for="dropdown">Which option best 
+            <div class="rowTab">
+                <div class="labels"><label for="currentRole">Which option best 
                     describes your current role?</label></div>
-                <div class="rtTab"><select name="dropdown" id="dropdown">
-                    <option disabled="" value="">Select an option</option>
-                    <option value="student">Student</option>
-                    <option value="learner">Full-time Learner</option>
-                    <option value="job">Full-time Job</option>
-                    <option value="notSay">Prefer Not to Say</option>
-                    <option value="other">Other</option>
-                </select></div>
-            
-
-
-            <!-- User Story #13: Inside the form element, I can select a field 
-            from one or more groups of radio buttons. Each group should be 
-            grouped using the name attribute. -->
-            <div class="labels"><label for="radioBtn">* How likely are you to 
-                recommend freeCodeCamp to a friend?</label></div>
-            <div class="rtTab">
-                <input id="definitely" type="radio" name="radioBtn">Definitely<br>
-                <input id="maybe" type="radio" name="radioBtn">Maybe<br>
-                <input id="notSure" type="radio" name="radioBtn">Not Sure
+                <div class="rtTab">
+                    <select name="currentRole" id="dropdown">
+                        <option disabled="" value="1">Select an option</option>
+                        <option name="student" value="2">Student</option>
+                        <option name="learner" value="3">Full-time Learner</option>
+                        <option name="job" value="4">Full-time Job</option>
+                        <option name="notSay" value="5">Prefer Not to Say</option>
+                        <option name="other" value="6">Other</option>
+                    </select>
+                </div>
             </div>
+            <!-- User Story #13: Inside the form element, I can select a field 
+                        from one or more groups of radio buttons. Each group should be 
+                        grouped using the name attribute. -->
+
                 
             <!-- <div class="rtTab"><input id="definitely" type="radio" name="radioBtn">Definitely</div>
-            <div class="rtTab"><input id="maybe" type="radio" name="radioBtn">Maybe</div>
-            <div class="rtTab"><input id="notSure" type="radio" name="radioBtn">Not Sure</div> -->
-
-
-            <!-- User Story #14: Inside the form element, I can select several 
-            fields from a series of checkboxes, each of which must have a 
-            value attribute. -->
-            <div class="labels">
-                <label for="checkboxes">Things that should be improved in the future (Check all that apply):</label>
+                        <div class="rtTab"><input id="maybe" type="radio" name="radioBtn">Maybe</div>
+                        <div class="rtTab"><input id="notSure" type="radio" name="radioBtn">Not Sure</div> -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="usrRatings">* How likely are you to
+                        recommend freeCodeCamp to a friend?</label>
+                </div>
+                <div class="rtTab">
+                    <ul style="list-style: none;">
+                        <li class="radio"><label>Definitely
+                                <input class="usrRatings" type="radio" name="radioBtn" value="1">
+                            </label></li>
+                        <li class="radio"><label>Maybe
+                                <input class="usrRatings" type="radio" name="radioBtn" value="2">
+                            </label></li>
+                        <li class="radio"><label>Not Sure
+                                <input class="usrRatings" type="radio" name="radioBtn" value="3">
+                            </label></li>
+                    </ul>
+                </div>
             </div>
-            <div class="rtTab">
-                    <input class="usrRating" name="prefer" type="checkbox" value="1">Front-end Projects<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="2">Back-end Projects<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="3">Data Visualization<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="4">Coding Challenges<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="5">Open Source Community<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="6">Gitter Help Rooms<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="7">Videos<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="8">City Meetups<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="9">Wiki<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="10">Forum<br>
-                    <input class="usrRating" name="prefer" type="checkbox" value="11">Additional Courses
-            </div>    
             
 
+            <div class="rowTab">
+                    <div class="labels"><label for="likeMost">What do you like most in freeCodeCamp?</label></div>
+                    <div class="rtTab">
+                        <select name="likeMost" id="dropdown">
+                            <option disabled="" value="1">Select an option</option>
+                            <option name="challenges" value="2">Challenges</option>
+                            <option name="projects" value="3">Projects</option>
+                            <option name="community" value="4">Community</option>
+                            <option name="openSource" value="5">Open Source</option>
+                        </select>
+                    </div>
+                </div>
+            
+            <!-- User Story #14: Inside the form element, I can select several 
+                                    fields from a series of checkboxes, each of which must have a 
+                                    value attribute. -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">Things that should be improved in the future (Check all that apply):</label>
+                </div>
+                <div class="rtTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="1">Front-end
+                                Projects</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="2">Back-end
+                                Projects</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="3">Data
+                                Visualization</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="4">Coding
+                                Challenges</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="5">Open Source
+                                Community</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="6">Gitter Help
+                                Rooms</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="7">Videos</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="8">City
+                                Meetups</label></li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="9">Wiki</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="10">Forum</label>
+                        </li>
+                        <li class="checkbox"><label><input class="usrRating" name="prefer" type="checkbox" value="11">Additional
+                                Courses</label></li>
+                    </ul>
+                </div>
+            </div>
+            
             <!-- User Story #15: Inside the form element, I am presented with 
-            a textarea at the end for additional comments. -->
-            <div class="labels"><label for="textarea-label">Any Comments or Suggestions?</label></div>
-                
-            <div class="rtTab"><textarea type="textarea" id="textarea" placeholder="Enter your comments here."
-                    name="textarea"></textarea></div>
+                        a textarea at the end for additional comments. -->
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">Any Comments or Suggestions?</label></div>
             
-
+                <div class="rtTab">
+                    <textarea type="textarea" id="textarea" placeholder="Enter your comments here..." name="textarea"></textarea>
+                </div>
+            </div>
 
             <!-- User Story #16: Inside the form element, I am presented with 
         a button with id="submit" to submit all my inputs. -->
@@ -130,7 +172,7 @@
         </form>
     </div>
 
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
