@@ -1,5 +1,9 @@
+/* CSS for freeCodeCamp  Responsive Web Design Projects - Build a Survey Form
+Elizabeth Hildreth
+completed 4/27/2019 */
 
 
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
 
   html, 
   body {
@@ -14,18 +18,14 @@
       font-weight: bold;
       margin: 20px;
   }
-
-  #title {
-      text-align: center;
-  }
   
   #formOuter {
-      background: white;
+      background-color: white;
       margin: 0 auto;
-      padding: 10px;
       border-radius: 4px;
       width: 75%;
       max-width: 900px;
+      padding: 10px;
       padding-top: 20px;
   }
 
@@ -43,13 +43,45 @@
     text-align: left;
     width: 48%;
     vertical-align: middle;
-    padding-top: 7px;
-    margin: 10px auto;
-    padding-bottom: 10px;
   }
-  #radioBtn {
-    
+
+  .input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
   }
+
+  #dropdown {
+    height: 35;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+  }
+
+    .radio, .checkbox {
+      position: relative;
+      left: -43px;
+      margin-left: 10px;
+      display: block;
+      padding-bottom: 10px;
+    }
+
+.usrRatings, 
+input [type="checkbox"]{
+  float: left;
+  margin-right: 5px;
+}
+
+#age {
+  width: 40px;
+}
+
   #prefer {
     line-height: 19px;
   }
@@ -57,12 +89,49 @@
   #description {
       text-align: center;
   }
+
   #submit {
-      
+      background-color: rgb(73, 197, 247);
+      border-radius: 4px;
+      font-size: 1em;
+      color: rgb(255,255,255);
+      height: 40px;
+      width: 100px;
+      margin: 10px;
+      border: 0px solid;
   }
 
+select {
+  height: 30px;
+}
 
 
-  @media (max-width: 355px) {
 
+@media screen and (max-width: 833px) {
+  .input-field {
+    width: 80%;
   }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .rtTab {
+    width: 100%;
+    float: left;
+  }
+  #textarea {
+    width: 100%;
+  }
+  .input-field {
+    width: 80%;
+  }
+  select {
+    width: 80%;
+  }
+}
